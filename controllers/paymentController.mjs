@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 import axios from "axios";
 import Payment from '../models/Payment.mjs';
-import amqp from "amqplib/callback_api";
+// import amqp from "amqplib/callback_api";
 import communicator from '../communicator/index.mjs';
 
 dotenv.config();
