@@ -1,7 +1,6 @@
 import express from "express";
 import paymentRouter from "./routes/paymentRoutes.mjs";
-
-
+import mongoose from "mongoose";
 
 const app = express();
 app.use(express.json());
