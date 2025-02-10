@@ -7,6 +7,6 @@ const paymentRouter = Router();
 paymentRouter.post("/initiate", initiatePayment);
 paymentRouter.get("/verify/:transaction_id",verifyPayment);
 paymentRouter.post("/webhook", paystackWebhook);
-paymentRouter.get("/order/:orderId", getPaymentById)
+paymentRouter.get("/order/:order_id", getPaymentById)
 
 export default paymentRouter;
