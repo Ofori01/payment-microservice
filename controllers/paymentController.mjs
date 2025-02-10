@@ -88,12 +88,13 @@ const initiatePayment = async (req, res) => {
             order_id,
             user_id: order.user_id,
             amount,
-            payment_status: "pending",
+            payment_status: "completed",
             payment_date: new Date(),
             transaction_reference,
         });
 
         await payment.save();
+        await communicator.updateOrder(order_id,{'payment_status': "completed"});
 
         res.status(200).json({ message: "Payment initialized", payment_link });
     } catch (err) {
