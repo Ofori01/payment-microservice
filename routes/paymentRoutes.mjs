@@ -5,7 +5,7 @@ import { getPaymentById, initiatePayment, paystackWebhook, verifyPayment } from 
 
 const paymentRouter = Router();
 paymentRouter.post("/initiate", initiatePayment);
-paymentRouter.get("/verify/:transactionId",verifyPayment);
+paymentRouter.get("/verify/:transaction_id",verifyPayment);
 paymentRouter.post("/webhook", paystackWebhook);
 paymentRouter.get("/order/:orderId", getPaymentById)
 
