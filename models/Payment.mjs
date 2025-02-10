@@ -15,8 +15,8 @@ const paymentSchema = new mongoose.Schema(
     }, // Added user reference
     payment_status: {
       type: String,
-      enum: ["success", "completed", "failed"],
-      default: "failed",
+      enum: ["pending", "completed", "failed"],
+      default: "pending",
     },
     payment_method: { type: String },
     payment_date: { type: Date, default: Date.now },
