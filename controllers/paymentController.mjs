@@ -44,6 +44,7 @@ const initiatePayment = async (req, res) => {
         if (!order) {
             return res.status(404).json({ message: "Order not found" });
         }
+        console.log(order);
 
         // Check if a pending payment already exists for the order
         const existingPayment = await Payment.findOne({ order_id, payment_status: "pending" });
